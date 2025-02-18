@@ -29,15 +29,27 @@ p {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--light-grayish-blue);
+	height: 99vh;
 
 	.articles {
-		margin: 165px 0 230px;
+		margin: 165px 50px 230px;
 		max-width: 1110px;
 		display: grid;
 		column-gap: 30px;
 		row-gap: 25px;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto;
+
+		@media (max-width: 991px) {
+			display: flex;
+			flex-direction: column;
+			margin: 150px 50px;
+		}
+		@media (max-width: 540px) {
+			display: flex;
+			flex-direction: column;
+			margin: 150px 20px;
+		}
 
 		.article[data-id="1"] {
 			grid-column: 1 / 3;
